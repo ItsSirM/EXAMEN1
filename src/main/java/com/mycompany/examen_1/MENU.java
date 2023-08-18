@@ -65,6 +65,11 @@ public class MENU extends javax.swing.JFrame {
         });
 
         fbk.setText("FACEEBOK");
+        fbk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fbkActionPerformed(evt);
+            }
+        });
 
         ub.setText("UBER");
         ub.addActionListener(new java.awt.event.ActionListener() {
@@ -140,7 +145,7 @@ public class MENU extends javax.swing.JFrame {
     private void ubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ubActionPerformed
        int seleccion = JOptionPane.showOptionDialog(
            null,
-           "Seleccione opcion en FACEBOOK", 
+           "Seleccione opcion en UBER", 
            "Que hacer",
            JOptionPane.YES_NO_CANCEL_OPTION,
            JOptionPane.QUESTION_MESSAGE,
@@ -155,13 +160,37 @@ public class MENU extends javax.swing.JFrame {
  
         }else if(seleccion==1){
             REGISTRO lg = new REGISTRO();
-            lg.setVisible(true);}
+            lg.setVisible(true);
             this.setVisible(false);
    
+        }
     }//GEN-LAST:event_ubActionPerformed
 
     private void twitteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_twitteMouseClicked
         int seleccion = JOptionPane.showOptionDialog(
+        null,
+        "Seleccione opcion en X", 
+        "Que hacer",
+        JOptionPane.YES_NO_CANCEL_OPTION,
+        JOptionPane.QUESTION_MESSAGE,
+        null,    // null para icono por defecto.
+        new Object[] { "Login", "Registro", "Regresar" },
+        "Regresar");
+
+        if(seleccion==0){
+            LOGIN lg = new LOGIN();
+            lg.setVisible(true);
+            this.setVisible(false);
+ 
+        }else if(seleccion==1){
+            REGISTRO lg = new REGISTRO();
+            lg.setVisible(true);
+            this.setVisible(false);
+        }  
+    }//GEN-LAST:event_twitteMouseClicked
+
+    private void fbkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fbkActionPerformed
+         int seleccion = JOptionPane.showOptionDialog(
         null,
         "Seleccione opcion en FACEBOOK", 
         "Que hacer",
@@ -178,10 +207,11 @@ public class MENU extends javax.swing.JFrame {
  
         }else if(seleccion==1){
             REGISTRO lg = new REGISTRO();
-            lg.setVisible(true);}
+            lg.setVisible(true);
             this.setVisible(false);
-   
-    }//GEN-LAST:event_twitteMouseClicked
+        }
+                                       
+    }//GEN-LAST:event_fbkActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton fbk;
