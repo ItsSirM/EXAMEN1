@@ -1,15 +1,43 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.examen_1;
-
-/**
- *
- * @author pcast
- */
+import java.util.ArrayList;
 public class UberSocial {
+    private static ArrayList<Twitter> twitter = new ArrayList<Twitter>();
+    private static ArrayList<Facebook> facebook = new ArrayList<Facebook>();
+    private String red = "";
     
+    public SocialClass buscar(String username){
+        return buscar(username, 0);
+    }
+    
+    private SocialClass buscar(String username, int x){
+        if(red.equals("TWITTER")){
+            for(int ix = x; ix<twitter.size(); ix++){
+                if(twitter.get(ix).username.equals(username)){
+                    return twitter.get(ix);
+                }
+                return buscar(username, ix);
+            }
+        }
+        else if (red.equals("FACEBOOK")){
+            for(int ix = x; ix<facebook.size(); ix++){
+                if(facebook.get(ix).username.equals(username)){
+                    return facebook.get(ix);
+                }
+                return buscar(username, ix);
+            }
+        }
+        return null;
+    }
+    
+    private void agregarCuenta(String user, String tipo){
+        SocialClass usuario = buscar(user);
+        if(usuario == null){
+            if(tipo == "TWITTER")
+                twitter.add(new Twitter(user));
+            else if(tipo == "FACEBOOK")
+                facebook.add(new Facebook(user));
+        }
+    }
 }
 /*
 Crear una clase llamada UberSocial la cual tiene un atributo de tipo arraylist para manejar clases de redes sociales.

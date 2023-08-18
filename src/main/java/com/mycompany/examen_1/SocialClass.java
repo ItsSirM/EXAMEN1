@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public abstract class SocialClass {
     private ArrayList<String> friends;
     public ArrayList<String> posts;
-    private String username;
+    public String username;
     
     SocialClass(String name){
         friends = new ArrayList<String>();
