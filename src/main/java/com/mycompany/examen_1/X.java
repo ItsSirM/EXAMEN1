@@ -16,6 +16,8 @@ public class X extends javax.swing.JFrame {
     public X() {
         initComponents();
     }
+    UberSocial uber = new UberSocial();
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -58,6 +60,11 @@ public class X extends javax.swing.JFrame {
         jButton1.setText("AÑADIR AMIGO");
 
         jButton2.setText("AÑADIR POST");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("COMENTAR");
 
@@ -166,6 +173,10 @@ public class X extends javax.swing.JFrame {
        
        LLL.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

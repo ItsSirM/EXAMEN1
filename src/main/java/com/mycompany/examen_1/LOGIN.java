@@ -16,6 +16,7 @@ public class LOGIN extends javax.swing.JFrame {
     public LOGIN() {
         initComponents();
     }
+    UberSocial uber = new UberSocial();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -72,6 +73,11 @@ public class LOGIN extends javax.swing.JFrame {
         });
 
         jButton2.setText("ENTRAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -135,6 +141,10 @@ public class LOGIN extends javax.swing.JFrame {
         
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       SocialClass user = uber.buscar(jTextField1.getText());
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
