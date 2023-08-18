@@ -7,6 +7,7 @@ public class Facebook extends SocialClass implements Commentable{
     
     public Facebook(String name) {
         super(name);
+        type = "FACEBOOK";
         data = new ArrayList<>();
     }
 

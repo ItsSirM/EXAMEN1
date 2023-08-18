@@ -5,6 +5,7 @@ public abstract class SocialClass {
     private ArrayList<String> friends;
     public ArrayList<String> posts;
     public String username;
+    public String type;
     
     SocialClass(String name){
         friends = new ArrayList<String>();

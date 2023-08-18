@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class UberSocial {
     private static ArrayList<Twitter> twitter = new ArrayList<Twitter>();
     private static ArrayList<Facebook> facebook = new ArrayList<Facebook>();
-    private String red = "";
+    public String red = "";
     
     public SocialClass buscar(String username){
         return buscar(username, 0);
@@ -29,13 +29,44 @@ public class UberSocial {
         return null;
     }
     
-    private void agregarCuenta(String user, String tipo){
+    public void agregarCuenta(String user, String tipo){
         SocialClass usuario = buscar(user);
         if(usuario == null){
-            if(tipo == "TWITTER")
+            if(tipo.equals("TWITTER"))
                 twitter.add(new Twitter(user));
-            else if(tipo == "FACEBOOK")
+            else if(tipo.equals("FACEBOOK"))
                 facebook.add(new Facebook(user));
+        }
+    }
+    
+    public void agregarPost(String user, String Post){
+        SocialClass usuario = buscar(user);
+        if(usuario != null){
+            usuario.addPosts(Post);
+        }
+    }
+    
+    public void agregarAmigo(String user1, String user2){
+        SocialClass us1 = buscar(user1);
+        SocialClass us2 = buscar(user2);
+        if(us1 != null && us2 != null){
+            if(us1.type.equals(us2.type)){
+                us1.addFriend(us2.username);
+                us2.addFriend(us1.username);
+            }
+        }
+    }
+    
+    public void agregarComment(String user, int postID, String autor, String comment){
+        red = "FACEBOOK";
+        SocialClass usuario = buscar(user);
+        
+    }
+    
+    public void profileForm(String user){
+        SocialClass usuario = buscar(user);
+        if(usuario != null){
+            usuario.myProfile();
         }
     }
 }
