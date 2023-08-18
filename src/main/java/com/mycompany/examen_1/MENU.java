@@ -148,9 +148,7 @@ public class MENU extends javax.swing.JFrame {
            new Object[] { "Login", "Registro", "Regresar" },
            "Regresar");
 
-        if (seleccion != -1){
-           System.out.println("seleccionada opcion " + (seleccion + 1));
-        }else if(seleccion==0){
+        if(seleccion==0){
             LOGIN lg = new LOGIN();
             lg.setVisible(true);
             this.setVisible(false);
@@ -173,9 +171,7 @@ public class MENU extends javax.swing.JFrame {
         new Object[] { "Login", "Registro", "Regresar" },
         "Regresar");
 
-        if (seleccion != -1){
-           System.out.println("seleccionada opcion " + (seleccion + 1));
-        }else if(seleccion==0){
+        if(seleccion==0){
             LOGIN lg = new LOGIN();
             lg.setVisible(true);
             this.setVisible(false);
