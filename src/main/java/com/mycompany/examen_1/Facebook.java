@@ -32,6 +32,6 @@ public class Facebook extends SocialClass implements Commentable{
         }
         return false;
     }
-    }
+}
     
     
