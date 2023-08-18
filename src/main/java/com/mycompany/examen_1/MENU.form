@@ -52,13 +52,13 @@
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="twitter" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <Component id="twitte" min="-2" pref="71" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                                  <Component id="fb" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fbk" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="uber" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ub" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -66,7 +66,7 @@
                           <Component id="jButton4" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="41" max="32767" attributes="0"/>
                   <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -81,12 +81,12 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="twitter" alignment="1" pref="69" max="32767" attributes="0"/>
-                              <Component id="uber" alignment="0" max="32767" attributes="0"/>
-                              <Component id="fb" alignment="0" max="32767" attributes="0"/>
+                              <Component id="twitte" alignment="1" pref="69" max="32767" attributes="0"/>
+                              <Component id="ub" alignment="0" max="32767" attributes="0"/>
+                              <Component id="fbk" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace pref="151" max="32767" attributes="0"/>
                           <Component id="jButton4" min="-2" pref="32" max="-2" attributes="0"/>
@@ -109,7 +109,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="422" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -134,31 +134,28 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Component class="javax.swing.JButton" name="twitter">
+        <Component class="javax.swing.JButton" name="twitte">
           <Properties>
             <Property name="text" type="java.lang.String" value="X"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="twitterMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="twitteMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="fb">
+        <Component class="javax.swing.JButton" name="fbk">
           <Properties>
             <Property name="text" type="java.lang.String" value="FACEEBOK"/>
           </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="fbMouseClicked"/>
-          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="uber">
+        <Component class="javax.swing.JButton" name="ub">
           <Properties>
             <Property name="text" type="java.lang.String" value="UBER"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="uberActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ubActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="jLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="DialogInput" size="18" style="0"/>
@@ -170,9 +167,6 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="SALIR"/>
           </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton4MouseClicked"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
