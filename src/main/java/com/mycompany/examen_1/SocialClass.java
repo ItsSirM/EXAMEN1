@@ -1,5 +1,6 @@
 package com.mycompany.examen_1;
 import java.util.ArrayList;
+
 public abstract class SocialClass {
     private ArrayList<String> friends;
     public ArrayList<String> posts;
