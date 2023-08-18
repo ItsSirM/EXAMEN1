@@ -2,7 +2,7 @@ package com.mycompany.examen_1;
 import java.util.ArrayList;
 public abstract class SocialClass {
     private ArrayList<String> friends;
-    private ArrayList<String> posts;
+    public ArrayList<String> posts;
     private String username;
     
     SocialClass(String name){
