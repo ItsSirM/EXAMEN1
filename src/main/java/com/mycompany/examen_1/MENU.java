@@ -6,14 +6,12 @@ package com.mycompany.examen_1;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author MARTI
- */
-public class MENU extends javax.swing.JFrame {
 
+public class MENU extends javax.swing.JFrame {
+private String mode;
     public MENU() {
         initComponents();
+        System.out.println(mode);
     }
 
     @SuppressWarnings("unchecked")
@@ -33,6 +31,8 @@ public class MENU extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
+        jPanel1.setBackground(new java.awt.Color(204, 221, 227));
+
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -46,6 +46,8 @@ public class MENU extends javax.swing.JFrame {
             .addGap(0, 17, Short.MAX_VALUE)
         );
 
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -54,7 +56,7 @@ public class MENU extends javax.swing.JFrame {
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 508, Short.MAX_VALUE)
         );
 
         twitte.setText("X");
@@ -64,7 +66,7 @@ public class MENU extends javax.swing.JFrame {
             }
         });
 
-        fbk.setText("FACEEBOK");
+        fbk.setText("FACEBOOK");
         fbk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fbkActionPerformed(evt);
@@ -101,18 +103,15 @@ public class MENU extends javax.swing.JFrame {
                                 .addComponent(ub))
                             .addComponent(jLabel)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(159, 159, 159)
+                        .addGap(158, 158, 158)
                         .addComponent(jButton4)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(55, 55, 55)
                         .addComponent(jLabel)
@@ -121,9 +120,12 @@ public class MENU extends javax.swing.JFrame {
                             .addComponent(twitte, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
                             .addComponent(ub, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(fbk, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(180, 180, 180)))
+                        .addGap(81, 81, 81))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -143,27 +145,28 @@ public class MENU extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ubActionPerformed
-       int seleccion = JOptionPane.showOptionDialog(
+        int seleccion = JOptionPane.showOptionDialog(
            null,
            "Seleccione opcion en UBER", 
            "Que hacer",
            JOptionPane.YES_NO_CANCEL_OPTION,
            JOptionPane.QUESTION_MESSAGE,
-           null,    // null para icono por defecto.
+           null, 
            new Object[] { "Login", "Registro", "Regresar" },
            "Regresar");
-
+        mode="UBER";
         if(seleccion==0){
-            LOGIN lg = new LOGIN();
+            LOGIN lg = new LOGIN(mode);
             lg.setVisible(true);
             this.setVisible(false);
  
         }else if(seleccion==1){
-            REGISTRO lg = new REGISTRO();
+            REGISTRO lg = new REGISTRO(mode);
             lg.setVisible(true);
             this.setVisible(false);
    
         }
+
     }//GEN-LAST:event_ubActionPerformed
 
     private void twitteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_twitteMouseClicked
@@ -176,17 +179,18 @@ public class MENU extends javax.swing.JFrame {
         null,    // null para icono por defecto.
         new Object[] { "Login", "Registro", "Regresar" },
         "Regresar");
-
+        mode="TWITTER";
         if(seleccion==0){
-            LOGIN lg = new LOGIN();
+            LOGIN lg = new LOGIN(mode);
             lg.setVisible(true);
             this.setVisible(false);
  
         }else if(seleccion==1){
-            REGISTRO lg = new REGISTRO();
+            REGISTRO lg = new REGISTRO(mode);
             lg.setVisible(true);
             this.setVisible(false);
         }  
+
     }//GEN-LAST:event_twitteMouseClicked
 
     private void fbkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fbkActionPerformed
@@ -199,14 +203,15 @@ public class MENU extends javax.swing.JFrame {
         null,    // null para icono por defecto.
         new Object[] { "Login", "Registro", "Regresar" },
         "Regresar");
-
+         
+         mode="FACEBOOK";
         if(seleccion==0){
-            LOGIN lg = new LOGIN();
+            LOGIN lg = new LOGIN(mode);
             lg.setVisible(true);
             this.setVisible(false);
  
         }else if(seleccion==1){
-            REGISTRO lg = new REGISTRO();
+            REGISTRO lg = new REGISTRO(mode);
             lg.setVisible(true);
             this.setVisible(false);
         }

@@ -4,6 +4,7 @@
  */
 package com.mycompany.examen_1;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -32,7 +33,8 @@ public final class Comment {
         return fecha.getTime();
     }
     public void imprimir(){
-        System.out.println(""+autor+"-"+fecha+":"+comentario);
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(autor + " - " + df.format(fecha.getTime())+"\n"+comentario);
     }
     
 }

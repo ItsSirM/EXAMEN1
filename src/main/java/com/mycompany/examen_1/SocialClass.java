@@ -48,4 +48,11 @@ public abstract class SocialClass {
         }
         System.out.println(friendLine);
     }
+    public ArrayList<String> getFriends() {
+        return friends;
+    }
+
+    public ArrayList<String> getPosts() {
+        return posts;
+    }
 }
